@@ -16,7 +16,7 @@ pipeline {
     }
 
     stage('Test stage') {
-        echo 'hello world'
+        sh "echo hello world'""
     }
   }
   post {

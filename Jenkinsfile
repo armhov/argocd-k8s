@@ -16,7 +16,9 @@ pipeline {
     }
 
     stage('Test stage') {
-        sh "echo hello world"
+      steps {
+        echo "hello world"
+      }
     }
   }
   post {

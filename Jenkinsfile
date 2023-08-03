@@ -7,7 +7,6 @@ pipeline {
     VERSION = "${env.BUILD_ID}-${env.GIT_COMMIT}"
     IMAGE = "${NAME}:${VERSION}"
     DOCKERHUB_CREDENTIALS = credentials('docker-hub-creds')
-
   }
   stages {
     stage('Echo creds'){
@@ -23,7 +22,6 @@ pipeline {
         sh 'docker tag ${ACCOUNT_UNAME}/${APP_NAME} ${ACCOUNT_UNAME}/${APP_NAME}:${VERSION'
       }
     }
-
   }
   post {
     always {

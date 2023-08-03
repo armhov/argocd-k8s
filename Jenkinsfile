@@ -19,7 +19,7 @@ pipeline {
     stage('Build') {
       steps {
         sh 'docker build -t ${ACCOUNT_UNAME}/${APP_NAME} .'
-        sh 'docker tag ${ACCOUNT_UNAME}/${APP_NAME} ${ACCOUNT_UNAME}/${APP_NAME}:${VERSION'
+        sh 'docker tag ${ACCOUNT_UNAME}/${APP_NAME} ${ACCOUNT_UNAME}/${APP_NAME}:${VERSION}'
       }
     }
   }
